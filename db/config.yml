@@ -1,0 +1,63 @@
+geocoders:
+  opencagedata:
+    api_key: b44f233db9bd4f139849b2a432e34f9b
+    use_https: true
+    timeout: 30
+  google:
+    api_key: AIzaSyBdWh2osjvjv1a_sgN3ngsfQm4aeB_jDRw
+    use_https: true
+    timeout: 30
+  yahoo:
+    api_key: 'Consumer Key goes in here'
+    use_https: true
+    timeout: 30
+
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: nafd_import
+  pool: 5
+  username: nafd_db
+  password: FLEN^ROtwP0l
+  host: localhost
+  port: 3306
+
+
+db:
+  # Temporary database where Access DB is imported to and maninpulation and data fudge is performed
+  development:
+    adapter: mysql2
+    encoding: utf8
+    reconnect: false
+    database: nafd_import
+    pool: 5
+    username: nafd_db
+    password: FLEN^ROtwP0l
+    host: localhost
+    port: 3306
+
+  # Public Wordpress site connection details
+  public_production:
+    adapter: mysql2
+    encoding: utf8
+    reconnect: false
+    database: wp_nafd_wordpress
+    pool: 5
+    username: nafd_db
+    password: FLEN^ROtwP0l
+    host: localhost
+    port: 3306
+
+  # Members Wordpress site connection details
+  members_production:
+    adapter: mysql2
+    encoding: utf8
+    reconnect: false
+    database: wp_members_wordpress
+    pool: 5
+    username: nafd_db
+    password: FLEN^ROtwP0l
+    host: localhost
+    port: 3306
